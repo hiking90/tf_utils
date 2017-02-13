@@ -37,7 +37,7 @@ with tf.Graph().as_default():
     init = tf.global_variables_initializer()
     sess = tf.Session()
     sess.run(init)
-    # tf.train.start_queue_runners(sess=sess)
+
     count = 0
     for in_filename in filenames:
         out_filename = FLAGS.dstdir + "/" + os.path.basename(in_filename)
