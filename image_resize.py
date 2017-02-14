@@ -11,7 +11,7 @@ def read_image(in_file):
     return tf.image.decode_png(tf.read_file(in_file))
 
 def resize_image(image):
-    return tf.cast(tf.image.resize_images(image, [HEIGHT, WIDTH]) * 255, tf.uint16)
+    return tf.cast(tf.image.resize_images(image, [TARGET_HEIGHT, TARGET_WIDTH]) * 255, tf.uint16)
 
 def save_image(filename, image):
     image = tf.image.encode_png(image)
